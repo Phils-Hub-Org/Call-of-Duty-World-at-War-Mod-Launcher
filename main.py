@@ -1,20 +1,31 @@
 from PySide6.QtWidgets import QApplication
 from Core.main_window import MainWindow
+from Core.widget import Widget
 from Core.mod_launcher import ModLauncher
+
+USING_MAINWINDOW = False
 
 class Entry:
 
     @classmethod
     def init(cls):
         
-        # Initialize main window
-        cls.mainWindow = MainWindow()
+        if USING_MAINWINDOW:
+            # Initialize main window
+            cls.mainWindow = MainWindow()
+            window = cls.mainWindow
+        else:
+            cls.Widget = Widget()
+            window = cls.Widget
 
         # Initialize mod launcher
-        cls.modLauncher = ModLauncher(cls.mainWindow)
+        cls.modLauncher = ModLauncher(window)
 
-        # Show main window
-        cls.mainWindow.show()
+        if USING_MAINWINDOW:
+            # Show main window
+            cls.mainWindow.show()
+        else:
+            cls.Widget.show()
 
 if __name__ == "__main__":
     import sys
