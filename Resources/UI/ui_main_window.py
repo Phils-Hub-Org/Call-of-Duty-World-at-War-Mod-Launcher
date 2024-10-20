@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowaJuMSZ.ui'
+## Form generated from reading UI file 'main_windowyfSail.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.7.2
 ##
@@ -668,7 +668,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Phils-Hub - WaW Asset Manager", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Phils-Hub - WaW Mod Launcher", None))
         self.actionAbout_asset_manager.setText(QCoreApplication.translate("MainWindow", u"About asset_manager...", None))
         self.actionAll_Assets.setText(QCoreApplication.translate("MainWindow", u"All Assets", None))
 #if QT_CONFIG(shortcut)
