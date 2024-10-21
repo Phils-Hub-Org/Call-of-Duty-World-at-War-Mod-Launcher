@@ -3,18 +3,19 @@ from PySide6.QtWidgets import QVBoxLayout, QSizeGrip
 from Utils.qt_utility import displayMessageBox
 
 class ModLauncher:
-    def __init__(self, mainWindow):
+    def __init__(self, mainWindow, USING_MAINWINDOW):
         self.mainWindow = mainWindow
 
-        # from Resources.UI.ui_main_window import Ui_MainWindow
-        # self.ui: Ui_MainWindow = self.mainWindow.ui
+        if USING_MAINWINDOW:
+            from Resources.UI.ui_main_window import Ui_MainWindow
+            self.ui: Ui_MainWindow = self.mainWindow.ui
+        else:
+            from Resources.UI.ui_widget import Ui_Widget
+            self.ui: Ui_Widget = self.mainWindow.ui
 
-        from Resources.UI.ui_widget import Ui_Widget
-        self.ui: Ui_Widget = self.mainWindow.ui
+            self.moveGripper()
 
-        self.moveGripper()
-
-        self.resizeGripper()
+            self.resizeGripper()
     
     def moveGripper(self):
         self.ui.frame_4.mousePressEvent = self.frame_4_mousePressEvent

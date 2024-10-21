@@ -19,7 +19,7 @@ class Entry:
             window = cls.Widget
 
         # Initialize mod launcher
-        cls.modLauncher = ModLauncher(window)
+        cls.modLauncher = ModLauncher(window, USING_MAINWINDOW)
 
         if USING_MAINWINDOW:
             # Show main window
