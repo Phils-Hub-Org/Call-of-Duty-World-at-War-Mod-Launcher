@@ -3,7 +3,7 @@ from Core.main_window import MainWindow
 from Core.widget import Widget
 from Core.mod_launcher import ModLauncher
 
-USING_MAINWINDOW = False
+USING_MAINWINDOW = True
 
 class Entry:
 
